@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disable Submit button</title>
+    <style>
+        /*#sub{*/
+        /*    margin-left: 20px;*/
+        /*    background-color: white;*/
+        /*    color: green;*/
+        /*    font-size: large;*/
+        /*}*/
+
+        /*#res{*/
+        /*    margin-left: 20px;*/
+        /*    background-color: gray;*/
+        /*    color: orange;*/
+        /*    font-size: large;*/
+        /*}*/
+    </style>
+  <script src="libs/jquerylib.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          $("#sub").attr("disabled", true);
+          $("#txt, #id, #date, #radio, #radio2").keyup(function() {
+              if ($("#txt").val() && $("#id").val() && $("#date").val() && $("#radio").is(":checked")) {
+                  $("#sub").attr("disabled", false);
+              } else {
+                  $("#sub").attr("disabled", true);
+              }
+          });
+      });
+
+  </script>
+</head>
+<body>
+  <form>
+      <h1>Registration Form</h1>
+      <hr><br><br>
+      <div>Enter name: <input type="text" id="txt" placeholder="your name please"> </div><br>
+      <div>Enter id: <input type="number" id="id" placeholder="your id please"> </div><br>
+      <div>Enter DOB: <input type="date" id="date" placeholder="your dob please"> </div><br>
+      <div>select Gender: <input type="radio" id="radio" name="rad" >male<input type="radio" id="radio2" name="rad">female</div><br>
+      <br><div><input type="button" id="sub" value="Submit">
+      <input type="button" id="res" value="Reset">
+      </div>
+  </form>
+
+</body>
+</html>

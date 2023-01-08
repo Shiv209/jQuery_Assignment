@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disable menu</title>
+    <script src="libs/jquerylib.min.js"></script>
+</head>
+<body>
+    <script>
+      $().ready(function(){
+        $(this).bind("contextmenu",function (e){
+          e.preventDefault();
+        });
+      });
+
+    </script>
+    <h1>Disabling right click menu...</h1>
+    <hr>
+
+</body>
+</html>
