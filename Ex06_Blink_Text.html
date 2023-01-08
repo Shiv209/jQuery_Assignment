@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Blink</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        function blinkText() {
+            $('#blink').fadeOut(500).fadeIn(500);
+        }
+
+        setInterval(blinkText, 1000);
+
+
+    </script>
+</head>
+<body>
+    <p id="blink">This text will blink</p>
+
+</body>
+</html>
