@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zebra stripes</title>
+  <script src="libs/jquerylib.min.js"></script>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table tr td{
+            width: 50%;
+            border: 1px solid
+            #ff751a;
+            padding: 5px;
+        }
+        table tr th{
+            border: 1px solid
+            #79ff4d;
+            padding: 5px;
+        }
+    </style>
+  <script>
+    $(() => {
+      $("table tr:odd").css("background-color", "grey");
+      $("table tr:even").css("background-color", "white");
+    });
+  </script>
+</head>
+<body>
+  <table>
+    <tr>
+        <th>Brand</th>
+        <th>Smartphone</th>
+    </tr>
+      <tr>
+          <td>Google</td>
+          <td>Google pixel 7 pro</td>
+      </tr>
+      <tr>
+          <td>Samsung</td>
+          <td>Samsung galaxy s22 ultra</td>
+      </tr>
+      <tr>
+          <td>Apple</td>
+          <td>iphone 14 pro max</td>
+      </tr>
+      <tr>
+          <td>Asus</td>
+          <td>Asus zenfone 9</td>
+      </tr>
+  </table>
+</body>
+</html>
+
+
+
