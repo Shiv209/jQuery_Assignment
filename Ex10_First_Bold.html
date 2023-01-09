@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First element bold</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Select all the elements that you want to modify
+            let elements = $('p');
+
+            // Iterate over each element
+            elements.each(function() {
+                // Get the text of the element
+                let text = $(this).text();
+
+                // Split the text into an array of words
+                let words = text.split(' ')
+
+                // Get the first word
+                let firstWord = words[0];
+
+                // Wrap the first word in a strong element
+                $(this).html(text.replace(firstWord, '<strong>' + firstWord + '</strong>'));
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>javaScript Exercise </p>
+    <p>jQuery Exercise</p>
+    <p>NodeJs Exercise</p>
+    <p>ExpressJs Exercise</p>
+    <p>ReactJs Exercise</p>
+</body>
+</html>

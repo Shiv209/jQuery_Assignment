@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Limit text area</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <style>
+        #txtarea{
+            display: block;
+            margin: 1em 0;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            let maxLength = 15;
+            $('#txtarea').keyup(function () {
+                let txtLength = maxLength - $(this).val().length;
+                $('#char').text(txtLength);
+            })
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label>Maximum 15 characters</label>
+        <textarea id="txtarea" maxlength="15"></textarea>
+        <span id="char">15</span> Character(s) Remaining
+    </form>
+</body>
+</html>

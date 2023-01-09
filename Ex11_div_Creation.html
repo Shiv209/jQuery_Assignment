@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div Creation</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        $().ready(function () {
+            // Create the div element
+            let div = $('<div>').css({
+                'width': '100px',
+                'height': '100px',
+                'background-color': 'teal',
+                'color': 'white',
+                'text-align': 'center',
+                'line-height': '100px'
+            });
+
+            // Add the div element to the body
+            div.appendTo('body');
+        });
+    </script>
+</head>
+<body>
+    <h1>div created...</h1>
+
+</body>
+</html>
