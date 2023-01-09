@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove option and select option</title>
+    <script src="libs/jquerylib.min.js"></script>
+</head>
+<body>
+    <select id="mySelect">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+    </select>
+    <button id="resetButton">Reset</button>
+
+    <script>
+        $('#resetButton').click(function () {
+            $('#mySelect').empty().append($('<option>', {
+                value: 1,
+                text: 'Option 1'
+            })).val(1);
+        });
+    </script>
+</body>
+</html>
