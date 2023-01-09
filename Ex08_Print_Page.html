@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Print</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <style>
+        #btn {
+            background-color: green;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <script>
+        $().ready(function () {
+            $("#btn").click(function () {
+                window.print();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Printing the page..!</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Ea itaque quia ratione suscipit! Commodi expedita facilis molestiae possimus provident rem r
+        epellat similique.
+        Blanditiis, laborum nesciunt nobis omnis quibusdam rem repellendus?</p>
+    <p><button id="btn">Print</button></p>
+</body>
+</html>
