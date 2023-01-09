@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selct values from json object</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        fruits = {"fruit1": "Mango", "fruit2": "Orange", "fruit3": "Banana", "fruit4": "Apple", "fruit5": "Grapes"}
+        $().ready(function () {
+            $.each(fruits, function (key, value) {
+                $('#slct').append($("<option/>", {
+                    value: key,
+                    text: value
+                }));
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="slct"></div>
+
+</body>
+</html>
