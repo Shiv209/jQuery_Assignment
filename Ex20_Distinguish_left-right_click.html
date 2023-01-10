@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Distinguish left-right click</title>
+    <script src="libs/jquerylib.min.js"></script>
+</head>
+<body>
+    <div id="myDiv">Click here to get position</div>
+    <script>
+        $(document).ready(function () {
+            $(document).mousedown(function (event) {
+                if (event.which == 1) {
+                    // Left mouse click
+                    alert('Left mouse click');
+                } else if (event.which == 3) {
+                    // Right mouse click
+                    alert('Right mouse click');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
