@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove Style added to .css() function</title>
+    <script src="libs/jquerylib.min.js"></script>
+</head>
+<body>
+    <p id="myParagraph">Example of removing and adding CSS function</p>
+    <button id="addButton">Add style</button>
+    <button id="removeButton">Remove style</button>
+    <script>
+        $('#addButton').click(function () {
+            $('#myParagraph').css('color', 'red');
+        });
+
+        $('#removeButton').click(function () {
+            $('#myParagraph').css('color', '');
+        });
+    </script>
+
+</body>
+</html>
