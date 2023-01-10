@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <style>
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <p id="myText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus dolore
+        ducimus eius enim ipsam mollitia, nesciunt nobis quasi sunt voluptas voluptate? Commodi consectetur
+        maiores nulla odit voluptas. Dignissimos, quas.</p>
+
+    <script>
+        $(document).ready(function () {
+            // Select the text element
+            var text = $('#myText');
+
+            // Split the text into words
+            var words = text.text().split(' ');
+
+            // Empty the text element
+            text.empty();
+
+            // Loop through the words and wrap each one in a span element
+            $.each(words, function (i, word) {
+                text.append($('<span>').text(word).addClass('underline'));
+                text.append(' ');
+            });
+        });
+    </script>
+</body>
+</html>
