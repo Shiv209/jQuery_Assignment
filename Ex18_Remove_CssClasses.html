@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove all css classes</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="myParagraph" class="red bold">Click reset to get simple text</p>
+    <button id="resetButton">Reset</button>
+
+    <script>
+
+        $('#resetButton').click(function () {
+            $('#myParagraph').removeClass();
+        });
+
+    </script>
+</body>
+</html>
