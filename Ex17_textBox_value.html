@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove option and add option to select it</title>
+    <script src="libs/jquerylib.min.js"></script>
+</head>
+<body>
+    <input type="text" id="myTextbox" value="Initial value">
+    <button id="getButton">Get value</button>
+    <button id="setButton">Set value</button>
+
+    <script>
+        $('#getButton').click(function () {
+            // Get the value of the textbox
+            var value = $('#myTextbox').val();
+            alert(value);
+        });
+
+        $('#setButton').click(function () {
+            // Set the value of the textbox
+            $('#myTextbox').val('New value');
+        });
+    </script>
+</body>
+</html>
