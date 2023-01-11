@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Access form input fields</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function getForm() {
+                $('#btn').click(function () {
+                    const obj = {};
+                    obj.name = $('#name').val();
+                    obj.email = $('#email').val();
+                    obj.id = $('#id').val();
+                    $("div:eq(1)>p").text(JSON.stringify(obj));
+                });
+            };
+            getForm();
+
+            $("a:last-child").click(function () {
+                $("div:nth-child(2)>p").hide(2000);
+            });
+            $("a:first-child").click(function () {
+                $("div:eq(1)>p").show(2000);
+            })
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <nav>
+            <a href="#">Show</a>
+            <a href="#">Hide</a>
+        </nav>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="id">Id:</label><br>
+            <input type="number" id="id" name="id"><br><br>
+            <input type="button" id="btn" value="Submit"><br>
+        </form>
+    </div>
+    <div>
+        <p style="background-color: black; color:orange ;"></p>
+    </div>
+</body>
+</html>
