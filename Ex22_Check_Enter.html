@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check enter pressed or not</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        $().ready(function () {
+            $("#key").keypress(function (e) {
+                if (e.which == 13) {
+                    alert("You pressed enter!");
+                };
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <p>Enter value and press enter:</p>
+    <input type="text" id="key">
+
+</body>
+</html>
