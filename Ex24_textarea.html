@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text area</title>
+    <script src="libs/jquerylib.min.js"></script>
+</head>
+<body>
+    <textarea id="my-textarea">Initial text for the textarea</textarea>
+    <button id="get-text-button">Get Text</button>
+    <button id="set-text-button">Set Text</button>
+    <script>
+        $(document).ready(function () {
+            $('#get-text-button').click(function () {
+                let text = $('#my-textarea').val();
+                console.log(text);
+            });
+            $('#set-text-button').click(function () {
+                $('#my-textarea').val("New text for the textarea");
+            });
+        });
+    </script>
+</body>
+</html>
