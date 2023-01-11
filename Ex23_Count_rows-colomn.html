@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count rows and coloumns</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <table id="tbl">
+        <tr>
+            <th>Brand</th>
+            <th>Smartphone</th>
+        </tr>
+        <tr>
+            <td>Google</td>
+            <td>Google pixel 7 pro</td>
+        </tr>
+        <tr>
+            <td>Samsung</td>
+            <td>Samsung galaxy s22 ultra</td>
+        </tr>
+        <tr>
+            <td>Apple</td>
+            <td>iphone 14 pro max</td>
+        </tr>
+        <tr>
+            <td>Asus</td>
+            <td>Asus zenfone 9</td>
+        </tr>
+    </table>
+    <script>
+        $(document).ready(function () {
+            let table = $('#tbl');
+            let numRows = table[0].rows.length;
+            let numCols = table[0].rows[0].cells.length;
+            console.log("Number of rows: " + numRows);
+            console.log("Number of columns: " + numCols);
+        });
+    </script>
+
+</body>
+</html>
