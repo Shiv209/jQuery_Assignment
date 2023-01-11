@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Check</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        let obj1 = {stat: "A javaScript object"},
+            obj2 = $('body');
+        if (obj1.jquery) {
+            console.log("obj1 is jQuery object");
+        } else {
+            console.log("obj1 is not a jQuery object")
+        }
+        if (obj2.jquery) {
+            console.log("obj2 is a jQuery object ");
+        } else {
+            console.log("obj2 is not a jQuery object");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
