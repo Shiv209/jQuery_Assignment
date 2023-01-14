@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let element = $("#element");
+            let htmlString = element.html();
+            let textString = element.text();
+            let attrString = element.attr('id');
+            let objectString = element.toString();
+            console.log(htmlString);
+            console.log(textString);
+            console.log(attrString);
+            console.log(objectString);
+        });
+    </script>
+</head>
+<body>
+    <div id="element">Converting jQuery object into String</div>
+</body>
+</html>
