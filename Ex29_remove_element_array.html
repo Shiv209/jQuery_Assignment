@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove element from an array</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let array = ['Orange', 'Mango', 'Banana', 'Apple', 'Grapes'];
+            let filteredArray = $.grep(array, function (value) {
+                return value !== 'Banana';
+            });
+            console.log(filteredArray);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
