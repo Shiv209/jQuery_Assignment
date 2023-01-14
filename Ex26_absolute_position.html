@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find absolute position using jQuery</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let position = $("#element").offset();
+            alert("Top: " + position.top + " Left: " + position.left);
+        });
+    </script>
+</head>
+<body>
+    <div id="element">This is the element</div>
+</body>
+</html>
