@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detect textbox content changed or not</title>
+    <script src="libs/jquerylib.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function (event) {
+                event.preventDefault();
+                alert("First and last name added succesfully..!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <form action="txt_form">
+        First Name: <label for="fname">First Name</label> <input type="text" class="name" name="fname"><br>
+        Last Name: <label for="lname">Last Name</label> <input type="text" class="name" name="lname"><br>
+        <input type="submit" value="Submit"><br>
+    </form>
+</body>
+</html>
